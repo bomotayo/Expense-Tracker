@@ -16,7 +16,9 @@ function Balance() {
   return (
     <div className="balance">
       <h1>Your Balance</h1>
-      <h1 className="balance-total">${total}</h1>
+      <h1 className="balance-total">
+        {total >= 0 ? `$${total}` : `-$${Math.abs(total).toFixed(2)}`}
+      </h1>
     </div>
   );
 }
